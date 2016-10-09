@@ -53,6 +53,55 @@ print(city)
 country=frozenset(["Frankfurt", "Basel","Freiburg"])
 # country.add cant possible
 
+# Improved notation
+# We can define sets (since Python2.6) without using the built-in set function. We can use curly braces instead:
+sets_books={"bangla","english","arabic"}
+
+print(sets_books)
+
+sets_books.add("mathmatics")  #perfacto
+print(sets_books)
+
+
+
+# set operations
+
+
+# Add operations
+
+
+# A method which adds an element, which has to be immutable, to a set.
+
+colours = {"red","green"}
+
+colours.add("yellow")
+# colurs.add(["white","black"]) not possible
+# coz they are mutable
+# add only adds immutable values
+print(colours)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
