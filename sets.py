@@ -4,3 +4,4 @@ __author__ = 'snow'
 
 x=2
 y=2
+result=x-y
