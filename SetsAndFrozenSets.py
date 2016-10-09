@@ -46,7 +46,13 @@ city.add("dhaka")
 print(city)
 
 
-# frozen
+# frozenset
+
+# Frozensets are like sets except that they cannot be changed, i.e. they are immutable:
+
+country=frozenset(["Frankfurt", "Basel","Freiburg"])
+# country.add cant possible
+
 
 
 
