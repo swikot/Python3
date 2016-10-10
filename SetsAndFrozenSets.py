@@ -81,6 +81,79 @@ colours.add("yellow")
 print(colours)
 
 
+# clear()
+
+# all elements will be removed from set
+
+
+
+sets_remove={"swikot","asif","hans","walton"}
+print(sets_remove)
+
+sets_remove.clear()
+
+print(sets_remove)
+
+
+# copy
+
+# creats shallow copy
+
+sets1={"roy","cook","butlar","dicket","morgan"}
+sets2=sets1.copy()
+
+print(sets1)
+print(sets2)
+
+sets2.clear()
+print()
+print("after clear sets1: ",sets1)
+print("after clear sets2: ",sets2)
+
+# Just in case, you might think, an assignment might be enough:
+
+sets3={"mashrafi","sabbir","musfick","mahmudullah"}
+sets4=sets3
+
+print(sets3)
+print(sets4)
+
+sets4.clear()
+
+
+print()
+
+print(sets3)
+print(sets4)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
