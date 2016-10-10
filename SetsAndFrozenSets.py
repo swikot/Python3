@@ -130,6 +130,152 @@ print(sets4)
 
 
 
+# difference()
+
+# This method returns the difference of two or more sets as a new set.
+x = {"a","b","c","d","e"}
+y = {"b","c"}
+z = {"c","d"}
+
+
+print(x.difference(y))
+print(x.difference(z))
+print(y.difference(z))
+
+print(x.difference(y).difference(z))
+
+
+print(x-y)
+print(x-z)
+print(x-y-z)
+
+
+
+
+# difference_update()
+# same as x=x-y
+x.difference_update(y)
+print(x)
+print(y)
+
+
+# discard(el)
+
+# An element el will be removed from the set, if it is contained in the set. If el is not a member of the set, nothing will be done.
+
+sets_name={"montu","poltu","rahim","karim","ashik"}
+sets_name.discard("montu")
+print(sets_name)
+sets_name.discard("karim")
+print(sets_name)
+sets_name.discard("ashik")
+print(sets_name)
+
+sets_name.discard("swikot")
+print(sets_name)#no error occurs
+
+
+
+# remove(el)
+# works like discard(), but if el is not a member of the set, a KeyError will be raised.
+
+
+sets_name2={"montu","poltu","rahim","karim","ashik"}
+sets_name2.remove("montu")
+print(sets_name2)
+# sets_name2.remove("swikot")
+# print(sets_name2)  not possible , cz  a key error will be raised
+
+
+# intersection(s)
+# Returns the intersection of the instance set and the set s as a new set
+#  In other words: A set with all the elements which are contained in both sets is returned.
+# mind it a new set will be created
+
+
+pi1= {"a","b","c","d","e"}
+pi2= {"c","d","e","f","g"}
+
+new_intersection_set=pi1.intersection(pi2)
+print("new intersection sets=",new_intersection_set)
+
+
+print("Intersection point with and operator= ",pi1 & pi2)
+
+
+# issubset()
+# x.issubset(y) returns True, if x is a subset of y
+
+name11= {"a","b","c","d","e"}
+name12= {"c","d"}
+
+print(name12.issubset(name11))
+print(name12 > name11)
+print(name12 <= name11)#equivalent to issubset()
+print(name11 >= name12)
+
+
+
+
+
+# issuperset()
+# >= is equaivalent to issuperset
+
+print("name 11 is the superset of name 12: ",name11.issuperset(name12))
+
+print(name12 < name11)# name12  is  a proper subset
+
+print(name12 > name11) #name11 is a proper superset
+
+
+
+
+# pop
+# pop() removes and returns an arbitrary set element. The method raises a KeyError if the set is empty
+
+name11.pop()
+print(name11)
+name11.pop()
+print(name11)
+
+# end of set
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
