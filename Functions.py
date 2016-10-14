@@ -47,6 +47,52 @@ print(hello_func.__doc__)
 
 # Keyword Parameters
 
+def sumsub(a, b, c=0, d=0):
+    return a - b + c - d
+
+
+print(sumsub(10,12))
+print(sumsub(10,12,d=15))
+
+
+# if u dont use it so the fuction looks like print(sumsub(42,15,0,10))
+
+# Return Values
+
+print("\n")
+def no_return(x,y):
+    c=x+y
+    return c
+
+res=no_return(4,5)
+print("result is: ",res)
+
+
+
+# Returning Multiple Values
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
