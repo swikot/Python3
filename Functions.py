@@ -24,6 +24,30 @@ for i in (22.3,23.4,25.6):
 
 # Optional Parameter
 
+def hello_Name(name="everybody"):
+    print("hello ",name)
+
+hello_Name("swikot")
+hello_Name()
+
+
+# Docstring
+
+
+def hello_func(name="everybody"):
+    "hi all"
+
+    print("hello",name)
+
+
+
+print(hello_func.__doc__)
+
+
+
+# Keyword Parameters
+
+
 
 
 
