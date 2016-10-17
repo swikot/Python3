@@ -45,9 +45,47 @@ def call_composure_one(name):
 call_two=call_composure_one
 print("call two is called from here : ",call_two("swikot"))
 
-
+print()
 
 # Composition of Decorators
+
+
+def get_text(name):
+    return "I am "+name
+
+def p_decorate(func):
+    def p_wrapper(name):
+        print("before calling......")
+        return func(name)
+    return p_wrapper
+
+
+my_calling=p_decorate(get_text)
+print("my decorated value is: ",my_calling("swikot"))
+get_text=p_decorate(get_text)
+print(get_text("john"))
+
+print()
+# decorate with syntax
+
+def p_decorate2(func):
+   def func_wrapper(name):
+       return "<p>{0}</p>".format(func(name))
+   return func_wrapper
+
+@p_decorate2
+def get_text2(name):
+   return "lorem ipsum, {0} dolor sit amet".format(name)
+
+print (get_text2("swikot"))
+
+
+
+
+
+
+
+
 
 
 
