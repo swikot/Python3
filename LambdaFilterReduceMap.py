@@ -1,4 +1,6 @@
 __author__ = 'snow'
+from functools import reduce #for reduce()
+
 # lambda
 # lambda argument_list: expression
 
@@ -81,13 +83,36 @@ odd_numbers=list(filter(lambda x:x%2,fibonacci))
 print("the odd numbers are: ",odd_numbers)
 even_numbers=list(filter(lambda x:x%2==0,fibonacci))
 print("the even numbers are: ",even_numbers)
-
+print()
 # Reducing a List
 # The function
 # reduce(func, seq)
+# continually applies the function func()
+# to the sequence seq. It returns a single value.
+myList=[1,2,3,4,5,6,7,8,9,10]
+red=reduce(lambda x,y:x+y,myList)
+print("the reduced value is: ",red)
+
+# finding maximum number
+mx_number=reduce(lambda x,y:x if x>y else y,myList)
+print("max value of myList is: ",mx_number)
+
+# summing
+sum_number=reduce(lambda x,y:x+y,range(1,11))
+print("sum of range: ",sum_number)
+
+# lottery
+lottery=reduce(lambda x,y:x+y,range(1,101))/reduce(lambda x,y:x+y,range(1,11))
+print("lottery value is: ",lottery)
+
+# Exercise
+
+orders = [ ["34587","Learning Python, Mark Lutz", 4, 40.95],
+	     ["98762","Programming Python, Mark Lutz", 5, 56.80],
+         ["77226","Head First Python, Paul Barry",3,32.95]]
 
 
-
+# rest
 
 
 
