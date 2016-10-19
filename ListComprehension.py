@@ -31,3 +31,57 @@ n=100
 non_prime=[j for i in range(2,int(sqrt(n))) for j in range(i*2,100,i)]
 primes=[i for i in range(2,100) if i not in non_prime]
 print("prime numbers are: ",primes)
+
+
+# Set Comprehension
+
+n1=1000
+key=int(sqrt(n1))
+not_prime={j for i in range(2,key) for j in range(i*2,1000,i)}
+primes={i for i in range(2,n1) if i not in not_prime}
+print("set comprehension primes: ",primes)
+
+
+# Recursive Function to Calculate the Primes
+
+def primes(n):
+    if n == 0:
+        return []
+    elif n == 1:
+        return []
+    else:
+        p = primes(int(sqrt(n)))
+        no_p = {j for i in p for j in range(i*2, n+1, i)}
+        p = {x for x in range(2, n + 1) if x not in no_p}
+    return p
+
+for i in range(1,50):
+    print(i, primes(i))
+
+
+# n Python 2, the loop control variable is not local,
+# t can change another variable of that name outside of the list comprehension,
+# x = "This value will be changed in the list comprehension"
+# res = [x for x in range(3)]
+# res
+# [0, 1, 2]
+#  x
+# 2
+# res = [i for i in range(5)]
+# i
+# 4
+#
+
+
+#in python 3
+# $ python3
+# Python 3.2 (r32:88445, Mar 25 2011, 19:28:28)
+# [GCC 4.5.2] on linux2
+# Type "help", "copyright", "credits" or "license" for more information.
+# >>> x = "Python 3 fixed the dirty little secret"
+# >>> res = [x for x in range(3)]
+# >>> print(res)
+# [0, 1, 2]
+# >>> x
+# 'Python 3 fixed the dirty little secret'
+# >>>
