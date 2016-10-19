@@ -69,14 +69,22 @@ __author__ = 'snow'
 # A Closer Look at the Match Objects
 
 import re
-mo = re.search("[0-9]+", "Customer number: 232454, Date: February 12, 2011")
-print(mo.group())
-print(mo.span())
-print(mo.start())
-print(mo.end())
-print()
-print(mo.span()[0])
-print(mo.span()[1])
+# mo = re.search("[0-9]+", "Customer number: 232454, Date: February 12, 2011")
+# print(mo.group())
+# print(mo.span())
+# print(mo.start())
+# print(mo.end())
+# print()
+# print(mo.span()[0])
+# print(mo.span()[1])
+
+
+mo = re.search("([0-9]+).*: (.*)", "Customer number: 232454, Date: February 12, 2011")
+
+mo.group()
+mo.group(1)
+mo.group(2)
+mo.group(1,2)
 
 
 
