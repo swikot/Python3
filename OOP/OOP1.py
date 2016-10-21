@@ -27,3 +27,15 @@ if __name__=="__main__":
     print(y.brand)
     print(y.__dict__)
     print(getattr(x,"enery",100))
+
+
+
+
+
+def f(x):
+     return 42
+
+f.x = 42
+print(f.x)
+
+
