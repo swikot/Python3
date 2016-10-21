@@ -65,12 +65,45 @@ print()
 
 
 import itertools
+perms=itertools.permutations(["r","e","d"])
+print(list(perms))
+per=itertools.permutations(["a","b","c","d"])
+print(list(per))
 
+print()
 
+# def square(nums):
+#     squ_number=[]
+#     for i in nums:
+#             squ_number.append(i*i)
+#
+#
+#     return squ_number
+#
+#
+#
+#
+#
+# squ=square([1,2,3,4,5])
+# print(squ)
+# can be modified as
 
+# def square(nums):
+#     squ_number=[]
+#     for i in nums:
+#             yield(i*i)
+#
+#
+# squ=square([1,2,3,4,5])
+#
+# for i in squ:
+#     print(i,end=" ")
 
+# after another modification
+squ=[x*x for x in [1,2,3,4,5]]
 
-
+for i in squ:
+    print(i,end=" ")
 
 
 
