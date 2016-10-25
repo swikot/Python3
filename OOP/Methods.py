@@ -31,7 +31,7 @@ Robot.say_hi(x)
 # reference to the instance, which called the method.
 #  This parameter is usually called "self".
 
-print(" ")
+
 
 
 
